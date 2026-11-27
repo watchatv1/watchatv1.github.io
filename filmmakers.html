@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Filmmakers: AI Television</title>
+<meta name="description" content="Premiere your AI film on AI Television. A Premiere Night presentation with plain, non-exclusive terms, and a film that stays yours.">
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Television">
+<meta property="og:title" content="For Filmmakers: AI Television">
+<meta property="og:description" content="Premiere your AI film on a television station. Full Premiere Night presentation, plain non-exclusive terms, your film stays yours.">
+<meta property="og:image" content="assets/og-badge.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="For Filmmakers: AI Television">
+<meta name="twitter:description" content="Premiere your AI film on a television station. Full Premiere Night presentation, plain non-exclusive terms, your film stays yours.">
+<meta name="twitter:image" content="assets/og-badge.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#d3a03e; --gold-bright:#f0c664; --gold-deep:#9a742a;
+    --ink:#070707; --panel:#101010; --panel2:#161310;
+    --ivory:#f5efe0; --dim:#b8b0a0; --line:rgba(211,160,62,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--gold);color:#171106}
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--ivory);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+  a{color:var(--gold-bright)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  /* ── top bar ─────────────────────────── */
+  header{position:sticky;top:0;z-index:10;background:rgba(7,7,7,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Cinzel',serif;font-weight:900;letter-spacing:.14em;font-size:1.05rem;color:var(--ivory);text-decoration:none;white-space:nowrap}
+  .brand img{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:block}
+  .brand em{font-style:normal;color:var(--gold)}
+  nav{display:flex;gap:22px;align-items:center}
+  nav a{color:var(--dim);text-decoration:none;font-size:.86rem;font-weight:600;letter-spacing:.04em}
+  nav a:hover{color:var(--gold-bright)}
+  @media(max-width:760px){nav a:not(.btn){display:none}}
+
+  .btn{display:inline-block;text-decoration:none;font-weight:700;letter-spacing:.06em;border-radius:4px;padding:12px 22px;font-size:.9rem;transition:.2s}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));color:#171106;box-shadow:0 2px 18px rgba(211,160,62,.35)}
+  .btn-gold:hover{filter:brightness(1.08)}
+  .btn-ghost{border:1px solid var(--gold);color:var(--gold-bright);background:transparent}
+  .btn-ghost:hover{background:rgba(211,160,62,.12)}
+  nav .btn{padding:9px 16px}
+
+  /* ── hero ─────────────────────────── */
+  .hero{position:relative;overflow:hidden;background:
+    radial-gradient(1100px 480px at 85% -10%,rgba(211,160,62,.16),transparent 60%),
+    radial-gradient(800px 500px at -10% 110%,rgba(211,160,62,.08),transparent 60%),var(--ink)}
+  .hero-in{padding:72px 0 64px;max-width:820px}
+  @media(max-width:860px){.hero-in{padding:48px 0}}
+  .kicker{color:var(--gold);font-weight:700;letter-spacing:.34em;font-size:.75rem;text-transform:uppercase;margin-bottom:18px}
+  h1{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(2.4rem,5.8vw,4.2rem);line-height:1.05;letter-spacing:.02em}
+  h1 .gold{background:linear-gradient(180deg,#f7dc9a,var(--gold) 55%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-sub{color:var(--dim);font-size:1.08rem;margin-top:20px;max-width:38em}
+  .hero-sub b{color:var(--ivory)}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+
+  /* ── sections ─────────────────────────── */
+  section{padding:64px 0 0}
+  section:last-of-type{padding-bottom:72px}
+  .sec-head{max-width:720px}
+  .sec-kicker{color:var(--gold);font-weight:700;letter-spacing:.3em;font-size:.72rem;text-transform:uppercase}
+  h2{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.5rem);margin:12px 0 14px;line-height:1.15}
+  .sec-head p{color:var(--dim);font-size:1.03rem}
+  .sec-head p + p{margin-top:12px}
+  .sec-head p b{color:var(--ivory)}
+
+  .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:10px;padding:34px 30px;max-width:820px}
+  .card h3{font-family:'Cinzel',serif;font-size:1.3rem;letter-spacing:.06em;color:var(--gold-bright);margin-bottom:12px}
+  .card p{color:var(--dim)}
+  .card p b{color:var(--ivory)}
+
+  .offer{display:grid;grid-template-columns:1fr 1fr;gap:16px 34px;margin-top:10px;max-width:1020px}
+  @media(max-width:760px){.offer{grid-template-columns:1fr}}
+  .offer li{list-style:none;padding-left:32px;position:relative;color:var(--dim)}
+  .offer li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:.8rem;top:4px}
+  .offer li b{color:var(--ivory)}
+
+  .terms{max-width:820px;margin-top:10px}
+  .terms li{list-style:none;padding:16px 0 16px 32px;position:relative;color:var(--dim);border-top:1px solid rgba(211,160,62,.14)}
+  .terms li:first-child{border-top:0}
+  .terms li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:.8rem;top:20px}
+  .terms li b{color:var(--ivory)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:8px}
+  @media(max-width:980px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+  .step{border-top:2px solid var(--gold);padding-top:18px}
+  .step .n{font-family:'Cinzel',serif;font-size:2rem;color:var(--gold);font-weight:900}
+  .step h4{font-size:1.02rem;margin:8px 0 6px}
+  .step p{color:var(--dim);font-size:.95rem}
+
+  .reserve{background:radial-gradient(700px 300px at 50% 0%,rgba(211,160,62,.16),transparent 65%),var(--panel);border:1px solid var(--line);border-radius:12px;text-align:center;padding:56px 28px}
+  .reserve .mail{font-family:'Cinzel',serif;font-size:clamp(1.15rem,3.4vw,1.9rem);color:var(--gold-bright);letter-spacing:.04em;word-break:break-all}
+
+  footer{border-top:1px solid var(--line);padding:38px 0 46px;text-align:center}
+  footer .fight{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.18em;color:var(--gold)}
+  footer p{color:var(--dim);font-size:.9rem;margin-top:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="assets/favicon.jpg" width="800" height="800" alt="AI Television robot seal">AI <em>TELEVISION</em></a>
+    <nav>
+      <a href="index.html#premiere">Premiere Night</a>
+      <a href="index.html#series">Series Night</a>
+      <a href="premieres.html">Premieres</a>
+      <a href="filmmakers.html">For Filmmakers</a>
+      <a href="#submit" class="btn btn-gold">Submit Your Film</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="kicker">For Filmmakers</div>
+    <h1>PREMIERE YOUR FILM ON A <span class="gold">TELEVISION STATION</span></h1>
+    <p class="hero-sub">AI Television premieres films by <b>independent AI filmmakers</b> on Premiere Night: presented, scheduled, and celebrated, with your name up front.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#submit">SUBMIT YOUR FILM</a>
+      <a class="btn btn-ghost" href="#terms">READ THE PLAIN TERMS</a>
+    </div>
+  </div>
+</div>
+
+<section id="station">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">The Station</div>
+      <h2>What AI Television is</h2>
+      <p>AI Television is a TV station for AI films. The films come from independent AI filmmakers, not from the station. Our job is to present them the way a station should.</p>
+      <p>Our host, <b>Lindsay</b>, introduces every film. Premieres run live on YouTube, with live chat, and every premiere gets an <b>encore later the same night</b>, so your audience can be there whenever they watch.</p>
+      <p>The schedule is public, and it is real: <a href="https://watchatv1.github.io/upcoming-premiere-dates">Upcoming premiere dates</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="premiere">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Premiere Night</div>
+      <h2>What a premiere includes</h2>
+    </div>
+    <ul class="offer">
+      <li><b>A night of your own.</b> Your film premieres at a scheduled time, presented as an event, not dropped into a feed.</li>
+      <li><b>The full station treatment.</b> A host introduction from Lindsay and the station's presentation around your film. Your film itself airs exactly as you delivered it. We do not cut, re-edit, or alter it.</li>
+      <li><b>Promotion.</b> Your premiere is promoted on the station's channel and social pages, and featured in Coming Attractions, our weekly guide to what is on the station.</li>
+      <li><b>Poster artwork.</b> You receive the poster artwork made for your premiere, yours to keep and share.</li>
+      <li><b>Your name up front.</b> You are credited, with your links, everywhere your film appears on the station.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="series">
+  <div class="wrap">
+    <div class="card">
+      <h3>SERIES NIGHT</h3>
+      <p><b>Making a series?</b> Episodic work has its own home on Series Night. Episodes premiere as a series, presented as one body of work, and new episodes join the night as they arrive.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fits">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">The Fit</div>
+      <h2>What fits the station</h2>
+      <p><b>Finished films.</b> Features, shorts, and series, in any genre. The station is entertainment first.</p>
+      <p><b>Over three minutes</b>, a film gets a Premiere Night of its own. Shorter films are grouped into a Shorts show, presented the same way.</p>
+      <p><b>Dates are set once your film is in hand</b> and checked, together, in writing, and never more than a month ahead.</p>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">The Terms</div>
+      <h2>Plain terms, in plain words</h2>
+    </div>
+    <ul class="terms">
+      <li><b>Non-exclusive.</b> The license you grant is non-exclusive. You can show your film anywhere else, before, during, and after your premiere.</li>
+      <li><b>Yours.</b> You keep full ownership of your film. A premiere never transfers your rights to the station.</li>
+      <li><b>Your uploads stay untouched.</b> Your own copies of your film, on your own channels, are never affected by a premiere here.</li>
+      <li><b>It stays up, and it comes down when you ask.</b> Your film remains on the station after its premiere, for as long as you want it there. If you ask us to take it down, it comes down.</li>
+      <li><b>In writing first.</b> The full terms come to you in writing before anything airs, and nothing airs until you have seen them.</li>
+      <li><b>On revenue.</b> The station is not monetized yet. When a premiere earns revenue here, you share in it, and the full terms come to you in writing before anything airs.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="plainly">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Said Plainly</div>
+      <h2>A young station, and we say so</h2>
+      <p>We are a young station, and we would rather tell you that plainly than dress it up. Our audience is still growing, and we will not promise you a crowd we cannot promise.</p>
+      <p>What we offer is the premiere itself, done properly: a real night, a real presentation, and a station that treats your film like it matters. That is the offer, and we stand behind it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="watch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">See One First</div>
+      <h2>Watch a Premiere Night</h2>
+      <p>Before you write to us, watch one. PRINCE EL SAKHAWI premiered on AI Television as a full Premiere Night presentation, and it is the best way to see what your film would get. Lindsay's introduction opens the presentation, so the full station treatment is there from the first minute.</p>
+      <p>Stated plainly, the way we state everything: it reached <b>583 views in its first 13 days</b> on the station.</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="https://www.youtube.com/watch?v=Dv1uYtzhQl4">WATCH PRINCE EL SAKHAWI</a>
+    </div>
+  </div>
+</section>
+
+<section id="submit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">How to Submit</div>
+      <h2>Start with one email</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Write to us</h4><p>Email channelaitv1@gmail.com with a link to your finished film.</p></div>
+      <div class="step"><div class="n">2</div><h4>We watch and reply</h4><p>We watch your film and write back to you.</p></div>
+      <div class="step"><div class="n">3</div><h4>The paperwork</h4><p>If your film is right for the station, the agreement and the full terms come to you in writing.</p></div>
+      <div class="step"><div class="n">4</div><h4>Your night is set</h4><p>Once your film is in hand and checked, we set the premiere date together, in writing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="reserve">
+      <div class="sec-kicker">Submit Your Film</div>
+      <h2>Your film deserves its night</h2>
+      <p class="mail">channelaitv1@gmail.com</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a class="btn btn-gold" href="mailto:channelaitv1@gmail.com">SUBMIT YOUR FILM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fight">AI TELEVISION — WE FIGHT FOR YOUR FILM</div>
+    <p>Watch on YouTube @WatchATV1 · Filmmaker contact: Channelaitv1@gmail.com</p>
+    <p>AI Television is founded and run by Rick Gardner.</p>
+    <p style="margin-top:6px;font-size:.8rem;color:#9a917f">© 2026 AI Television. All films remain the property of their filmmakers.</p>
+  </div>
+</footer>
+
+</body>
+</html>
